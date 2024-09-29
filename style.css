@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: skyblue;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  padding: 2em;
+}
+
+main {
+  /* padding: 2em; */
+}
+
+.profile_1 {
+  max-width: 300px;
+}
+
+.projects {
+  resize: both;
+  overflow: auto;
+  display: grid;
+  gap: 2em;
+  padding: 4em;
+  /* border: 1px solid grey; */
+  background-color: white;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.project-card {
+  /* max-width: 200px; */
+}
+
+.project-card img {
+  width: 100%;
+}
