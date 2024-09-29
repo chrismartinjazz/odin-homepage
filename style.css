@@ -3,39 +3,99 @@
 }
 
 body {
-  background-color: skyblue;
+  background-color: white;
   margin: 0 auto;
+  max-width: 1280px;
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: "Playfair Display", sans-serif;
+}
+
+header,
+footer {
+  background-color: #0891b2;
 }
 
 header {
   display: flex;
-  padding: 2em;
+  padding: 3em;
+  margin: 0 0;
+}
+
+.profile_1,
+.header--text {
+  max-height: 20rem;
+}
+
+.header--image {
+  position: relative;
+  text-align: center;
+}
+
+.header--image>h1 {
+  margin: 0;
+  color: white;
+  width: 100%;
+  position: absolute;
+  bottom: 0.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header--text {
+  background: white;
+  margin: 2rem 0;
+  padding: 1rem;
 }
 
 main {
-  /* padding: 2em; */
-}
-
-.profile_1 {
-  max-width: 300px;
+  background-color: white;
+  padding: 3em;
 }
 
 .projects {
+  padding: 1rem;
   resize: both;
   overflow: auto;
   display: grid;
   gap: 2em;
-  padding: 4em;
+  /* padding: 4em; */
   /* border: 1px solid grey; */
   background-color: white;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.project-card {
-  /* max-width: 200px; */
+.card {
+  box-shadow: 0 0 8px #AAAAAA;
 }
 
-.project-card img {
-  width: 100%;
+.card img {
+  max-width: 100%;
+}
+
+.card--text {
+  padding: 1rem;
+}
+
+.card--header {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 3em;
+  margin: 0 0;
+  color: white;
+}
+
+.profile_2 {
+  max-width: 30rem;
 }
