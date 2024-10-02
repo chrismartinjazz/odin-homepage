@@ -32,6 +32,10 @@ body {
   font-size: var(--font-size);
 }
 
+p {
+  line-height: 1.6rem;
+}
+
 h1,
 h2,
 h3 {
@@ -74,7 +78,7 @@ footer {
    HEADER
    ====== */
 
-header {
+.header--container {
   display: flex;
   align-items: center;
   padding: var(--x-lg);
@@ -86,13 +90,13 @@ header {
   flex: 1
 }
 
-.header--image>img {
+.header--image img {
   width: 100%;
   min-height: 350px;
   object-fit: cover;
 }
 
-.header--image>h1 {
+.header--image h1 {
   margin: 0;
   color: var(--text-color-light);
   width: 100%;
@@ -102,15 +106,12 @@ header {
   transform: translateX(-50%);
 }
 
-.header--text {
+.header--card {
   flex: 1;
   background: var(--bg-color-1);
   box-shadow: 0 0 8px var(--box-shadow-color);
   margin: 2rem 0;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .header--links {
@@ -203,9 +204,9 @@ footer {
    MEDIA QUERIES 
    ============= */
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
 
-  header,
+  .header--container,
   footer {
     flex-direction: column;
   }
@@ -229,14 +230,42 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 601px) and (max-width: 800px) {
   header {
-    flex: none;
+    padding: 3em 0 0 0;
+    margin: 0;
   }
 
-  .header--image>img {
-    border: solid red;
+  .header--container {
+    display: inline-block;
+  }
+
+  .header--image {
+    position: static;
+  }
+
+  .header--image img {
     float: left;
+    width: 300px;
+    margin: 0 -2.5rem -5rem 0;
+    transform: translate(-3rem, -5rem);
+    min-height: 0px;
+  }
+
+  .header--image h1 {
+    position: static;
+    text-align: center;
+    transform: translateY(-5rem);
+    /* text-align: center; */
+  }
+
+  .header--card {
+    background: var(--bg-color-1);
+    margin: -3em 0 0 0;
+  }
+
+  .header--card h2 {
+    text-align: center;
   }
 }
 
